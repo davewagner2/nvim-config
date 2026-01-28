@@ -5,11 +5,14 @@ Current LazyVim config as of 2026-01-21
 # Notes on setting up neovim
 
 - clone my neovim repo from github
-- linux requirements:
+- linux requirements (snap if available, apt if not):
   - `xclip` (for img-clip.nvim)
+  - `python3`
+  - `python3-pip`
   - `fzf`
   - `lazygit`
   - `ripgrep`
+  - `clang`
   - `build-essential`
 
 ## Installing treesitter-cli:
