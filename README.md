@@ -11,7 +11,19 @@ Current LazyVim config as of 2026-01-21
   - `lazygit`
   - `ripgrep`
   - `build-essential`
-  - `luarocks`
+
+## Installing treesitter-cli:
+
+```bash
+sudo snap install rustup
+rustup default stable
+cargo install --locked tree-sitter-cli
+```
+
+## Kitty setup for fonts
+
+Download the `Symbols Nerd Font`
+Copy to `~/.local/share/fonts/`
 
 ## Links:
 
