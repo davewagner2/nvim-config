@@ -5,10 +5,11 @@ Current LazyVim config as of 2026-01-21
 # Notes on setting up neovim
 
 - clone my neovim repo from github
-- linux requirements (snap if available, apt if not):
+- linux requirements (apt if available, snap if not):
   - `xclip` (for img-clip.nvim)
   - `python3`
   - `python3-pip`
+  - `python3-venv`
   - `fzf`
   - `lazygit`
   - `ripgrep`
