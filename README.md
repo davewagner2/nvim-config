@@ -24,6 +24,13 @@ rustup default stable
 cargo install --locked tree-sitter-cli
 ```
 
+## MasonInstall commands
+
+```nvim
+:MasonInstall rust-analyzer codelldb
+:MasonInstall zuban
+```
+
 ## Kitty setup for fonts
 
 Download the `Symbols Nerd Font`
