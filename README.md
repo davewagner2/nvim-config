@@ -1,6 +1,6 @@
 # 💤 LazyVim
 
-Current LazyVim config as of 2026-01-21
+Current LazyVim config as of 2026-09-09
 
 # Notes on setting up neovim
 
@@ -16,7 +16,7 @@ Current LazyVim config as of 2026-01-21
   - `clang`
   - `build-essential`
 
-## Installing treesitter-cli:
+## Installing treesitter-cli
 
 ```bash
 sudo snap install rustup
@@ -31,14 +31,21 @@ cargo install --locked tree-sitter-cli
 :MasonInstall zuban
 ```
 
+## Setup Cloudflare access key for ollama
+
+```bash
+export CF_ACCESS_CLIENT_ID="clientid"
+export CF_ACCESS_CLIENT_SECRET="cientsecret"
+```
+
 ## Kitty setup for fonts
 
 Download the `Symbols Nerd Font`
 Copy to `~/.local/share/fonts/`
 
-## Links:
+## Links
 
- - [img-clip repo](https://neovimcraft.com/plugin/HakonHarnes/img-clip.nvim/)
- - [dave's nvim repo](https://github.com/davewagner2/nvim-config)
- - [rainbow_csv repo](https://github.com/cameron-wags/rainbow_csv.nvim)
+- [img-clip repo](https://neovimcraft.com/plugin/HakonHarnes/img-clip.nvim/)
+- [dave's nvim repo](https://github.com/davewagner2/nvim-config)
+- [rainbow_csv repo](https://github.com/cameron-wags/rainbow_csv.nvim)
   
