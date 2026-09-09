@@ -1,6 +1,9 @@
 return { -- override blink.cmp plugin to keep from autoselecing and gets <TAB> to rotate through options
   "Saghen/blink.cmp",
   opts = {
+    sources = {
+      default = { "lsp", "path", "snippets", "buffer", "codecompanion" },
+    },
     completion = {
       list = {
         selection = {
@@ -13,20 +16,3 @@ return { -- override blink.cmp plugin to keep from autoselecing and gets <TAB> t
     },
   },
 }
-
--- option to disable preselect entirely
--- return {
---   {
---     "saghen/blink.cmp",
---     optional = true,
---     opts = {
---       completion = {
---         list = {
---           selection = {
---             preselect = false,
---           },
---         },
---       },
---     },
---   },
--- }
