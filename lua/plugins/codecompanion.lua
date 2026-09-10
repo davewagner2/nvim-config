@@ -32,6 +32,9 @@ return {
         inline = {
           adapter = "ollama",
         },
+        cmd = {
+          adapter = "ollama",
+        },
       },
     })
   end,
