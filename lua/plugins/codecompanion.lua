@@ -3,12 +3,25 @@ return {
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-treesitter/nvim-treesitter",
+    "lalitmee/codecompanion-spinners.nvim",
   },
   config = function()
     require("codecompanion").setup({
       -- Opts dictates the internal processing architecture
       opts = {
         stream = true,
+      },
+      extensions = {
+        spinner = {
+          enabled = true,
+          opts = {
+            style = "snacks", -- Seamlessly replaces your manual Snacks.notify autocommands
+            content = {
+              thinking = { icon = "🤖", message = "Thinking..." },
+              receiving = { icon = "📥", message = "Streaming response..." },
+            },
+          },
+        },
       },
       adapters = {
         http = {
@@ -76,31 +89,6 @@ return {
           default = 16384,
         },
       },
-    })
-
-    -- The autocommand hooks are now safely contained inside the config function:
-    local group = vim.api.nvim_create_augroup("CodeCompanionStatusHooks", { clear = true })
-    vim.api.nvim_create_autocmd({ "User" }, {
-      pattern = "CodeCompanionRequest*",
-      group = group,
-      callback = function(ev)
-        local msg
-        if ev.match == "CodeCompanionRequestStarted" then
-          msg = "CodeCompanion thinking..."
-        elseif ev.match == "CodeCompanionRequestStreaming" then
-          msg = "Streaming response..."
-        elseif ev.match == "CodeCompanionRequestFinished" then
-          msg = "Finished!"
-        end
-
-        if msg then
-          Snacks.notify(msg, {
-            level = "info",
-            id = "code_companion_status",
-            title = "CodeCompanion",
-          })
-        end
-      end,
     })
   end,
 }
